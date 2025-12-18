@@ -5,3 +5,33 @@ html, body {
     padding: 0;
     overflow: hidden;
 }
+
+/* Turnstile Widget Container Styles */
+.turnstile-widget-container {
+    background: rgba(255, 255, 0, 0.1) !important; /* Slight yellow tint for debugging */
+    border: 2px dashed rgba(255, 0, 0, 0.3) !important; /* Red dashed border for debugging */
+}
+
+.turnstile-widget-container * {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.turnstile-widget-container iframe {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 300px !important;
+    height: 65px !important;
+    border: none !important;
+    background: white !important;
+}
+
+/* Force visibility for any Cloudflare Turnstile elements */
+[id^="cf-chl-widget"],
+[id*="turnstile"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
